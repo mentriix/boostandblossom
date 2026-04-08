@@ -5,17 +5,38 @@
 // ---- Mobile menu toggle ----
 const hamburger = document.getElementById('hamburger');
 const navMenu   = document.getElementById('nav-menu');
+const navOverlay = document.getElementById('nav-overlay');
+
+function closeMenu() {
+  navMenu.classList.remove('open');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  if (navOverlay) {
+    navOverlay.classList.remove('active');
+    navOverlay.setAttribute('aria-hidden', 'true');
+  }
+}
 
 hamburger.addEventListener('click', () => {
+  const isOpen = navMenu.classList.contains('open');
   navMenu.classList.toggle('open');
   hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', String(!isOpen));
+  if (navOverlay) {
+    navOverlay.classList.toggle('active', !isOpen);
+    navOverlay.setAttribute('aria-hidden', String(isOpen));
+  }
+  if (!isOpen) {
+    // Mover foco al primer enlace del menú
+    const firstLink = navMenu.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
 });
 
+if (navOverlay) navOverlay.addEventListener('click', closeMenu);
+
 navMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    hamburger.classList.remove('active');
-  });
+  link.addEventListener('click', closeMenu);
 });
 
 // ---- Navbar scroll shadow (passive para no bloquear scroll) ----
@@ -146,9 +167,147 @@ document.querySelectorAll('.faq__question').forEach(btn => {
     ?.addEventListener('click', () => closeModal('cookie-modal'));
   document.getElementById('cookie-modal-backdrop')
     ?.addEventListener('click', () => closeModal('cookie-modal'));
+
+  // ---- Focus trap para todos los modales ----
+  const FOCUSABLE = 'a[href],button:not([disabled]),input,textarea,select,[tabindex]:not([tabindex="-1"])';
+
+  function trapFocus(modal, e) {
+    const els = [...modal.querySelectorAll(FOCUSABLE)].filter(el => !el.closest('[aria-hidden="true"]'));
+    if (!els.length) return;
+    const first = els[0], last = els[els.length - 1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    const openModal = document.querySelector('.cookie-modal.visible');
+    if (openModal) trapFocus(openModal, e);
+  });
+
+  // Mover foco al modal al abrirse
+  const originalOpen = window.openModal;
+  window.openModal = id => {
+    originalOpen(id);
+    setTimeout(() => {
+      const modal = document.getElementById(id);
+      if (modal) {
+        const first = modal.querySelector(FOCUSABLE);
+        if (first) first.focus();
+      }
+    }, 50);
+  };
 })();
 
-// ---- Contact form — Netlify Forms (pendiente de integrar) ----
+// ---- Contact form — validación inline ----
+(function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const submitBtn = document.getElementById('form-submit');
+  const feedback  = document.getElementById('form-feedback');
+
+  const rules = {
+    nombre:  { min: 2,  msg: 'Por favor, escribe tu nombre (mínimo 2 caracteres).' },
+    empresa: { min: 2,  msg: 'Escribe el nombre de tu negocio o marca.' },
+    email:   { email: true, msg: 'Escribe un email válido.' },
+    mensaje: { min: 20, msg: 'Cuéntame un poco más (mínimo 20 caracteres).' },
+  };
+
+  function showError(id, msg) {
+    const input = document.getElementById(id);
+    const error = document.getElementById('error-' + id);
+    if (!input || !error) return;
+    error.textContent = msg;
+    input.closest('.form-group').classList.add('has-error');
+    input.closest('.form-group').classList.remove('is-valid');
+    input.setAttribute('aria-invalid', 'true');
+    input.setAttribute('aria-describedby', 'error-' + id);
+  }
+
+  function clearError(id) {
+    const input = document.getElementById(id);
+    const error = document.getElementById('error-' + id);
+    if (!input || !error) return;
+    error.textContent = '';
+    input.closest('.form-group').classList.remove('has-error');
+    input.closest('.form-group').classList.add('is-valid');
+    input.removeAttribute('aria-invalid');
+    input.removeAttribute('aria-describedby');
+  }
+
+  function validateField(id) {
+    const input = document.getElementById(id);
+    if (!input) return true;
+    const rule = rules[id];
+    const val  = input.value.trim();
+    if (rule.email) {
+      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      if (!ok) { showError(id, rule.msg); return false; }
+    } else if (val.length < rule.min) {
+      showError(id, rule.msg); return false;
+    }
+    clearError(id); return true;
+  }
+
+  // Validar al salir del campo
+  Object.keys(rules).forEach(id => {
+    const input = document.getElementById(id);
+    if (!input) return;
+    input.addEventListener('blur', () => validateField(id));
+    input.addEventListener('input', () => {
+      if (input.closest('.form-group').classList.contains('has-error')) validateField(id);
+    });
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    // Validar todos
+    const valid = Object.keys(rules).map(id => validateField(id)).every(Boolean);
+    if (!valid) {
+      const firstError = form.querySelector('.has-error input, .has-error textarea');
+      if (firstError) firstError.focus();
+      return;
+    }
+
+    // Estado loading
+    submitBtn.classList.add('loading');
+    feedback.className = 'form-feedback';
+    feedback.textContent = '';
+
+    try {
+      // Netlify Forms: se activa automáticamente en producción
+      const data = new FormData(form);
+      const res  = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
+      });
+
+      if (res.ok) {
+        feedback.textContent = '¡Mensaje enviado! Te respondo en menos de 24h.';
+        feedback.classList.add('success');
+        form.reset();
+        Object.keys(rules).forEach(id => {
+          const g = document.getElementById(id)?.closest('.form-group');
+          if (g) g.classList.remove('is-valid', 'has-error');
+        });
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      feedback.textContent = 'Algo salió mal. Escríbeme directamente a info@boostandblossom.com';
+      feedback.classList.add('error');
+    } finally {
+      submitBtn.classList.remove('loading');
+    }
+  });
+})();
 
 // ---- Scroll reveal — CSS classes, translateY + opacity, stagger elegante ----
 (function () {

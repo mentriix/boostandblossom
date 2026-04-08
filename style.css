@@ -1198,6 +1198,7 @@ body.dark-mode .portfolio-card__desc  { color: #B8B4AC; }
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--pearl);
+  transition: background var(--transition), border-color var(--transition);
 }
 
 .faq__question {

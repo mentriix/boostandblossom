@@ -12,7 +12,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <meta property="og:image" content="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,7 +23,7 @@
   <header class="navbar">
     <div class="navbar__inner container">
       <a href="#inicio" class="navbar__brand">Boost <span>&</span> Blossom</a>
-      <nav class="navbar__nav" id="nav-menu">
+      <nav class="navbar__nav" id="nav-menu" aria-label="Navegación principal">
         <ul>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#proceso">Proceso</a></li>
@@ -30,16 +32,26 @@
           <li><a href="#contacto" class="btn btn--nav btn--nav-cta">Diagnóstico gratuito</a></li>
         </ul>
       </nav>
-      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="navbar__actions">
+        <button id="theme-toggle" aria-label="Cambiar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="navbar__overlay" id="nav-overlay" aria-hidden="true"></div>
     </div>
   </header>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
-<img src="logos/1.png" alt="Boost & Blossom" class="hero__logo" />
     <div class="container hero__content">
+      <picture class="hero__logo">
+        <source srcset="logos/1.webp" type="image/webp">
+        <img src="logos/1.png" alt="Boost &amp; Blossom" width="200" height="200" fetchpriority="high">
+      </picture>
       <p class="hero__tagline">Estrategia de contenido para marcas premium</p>
       <h1 class="hero__headline">
         <span>Tienes un producto excelente.</span>
@@ -164,7 +176,7 @@
   </section>
 
   <!-- ===== STATS STRIP ===== -->
-  <section class="stats" aria-hidden="true">
+  <section class="stats">
     <div class="container stats__grid">
       <div class="stat">
         <span class="stat__num">×3</span>
@@ -236,7 +248,7 @@
       <div class="servicios__grid">
 
         <div class="service-card">
-          <div class="service-card__icon">
+          <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-6-6-10-6-10a6 6 0 0 1 12 0s-6 4-6 10z"/><path d="M12 22V12"/></svg>
           </div>
           <h3>Auditoría &amp; Análisis</h3>
@@ -244,7 +256,7 @@
         </div>
 
         <div class="service-card service-card--featured">
-          <div class="service-card__icon">
+          <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
           <h3>Estrategia de Contenido</h3>
@@ -252,7 +264,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">
+          <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/></svg>
           </div>
           <h3>Calendario Editorial</h3>
@@ -260,7 +272,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">
+          <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           </div>
           <h3>Creación Visual</h3>
@@ -268,7 +280,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">
+          <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="2"/><line x1="2" y1="8.5" x2="22" y2="8.5"/></svg>
           </div>
           <h3>Plan Personalizado</h3>
@@ -276,7 +288,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">
+          <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           </div>
           <h3>Seguimiento &amp; Optimización</h3>
@@ -390,20 +402,32 @@
           </li>
         </ul>
       </div>
-      <form class="contacto__form" id="contact-form" novalidate autocomplete="off">
+      <form class="contacto__form" id="contact-form" novalidate autocomplete="on">
         <div class="form-group">
           <label for="nombre">Tu nombre</label>
-          <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required />
+          <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" autocomplete="name" required />
+          <span class="form-error" id="error-nombre" role="alert" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Tu negocio o marca</label>
+          <input type="text" id="empresa" name="empresa" placeholder="¿Cómo se llama tu empresa?" autocomplete="organization" required />
+          <span class="form-error" id="error-empresa" role="alert" aria-live="polite"></span>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+          <span class="form-error" id="error-email" role="alert" aria-live="polite"></span>
         </div>
         <div class="form-group">
           <label for="mensaje">¿Cuál es tu situación actual?</label>
           <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame qué vendes, en qué redes estás y qué no está funcionando..." required></textarea>
+          <span class="form-error" id="error-mensaje" role="alert" aria-live="polite"></span>
         </div>
-        <button type="submit" class="btn btn--primary btn--full">Quiero mi diagnóstico gratuito →</button>
+        <button type="submit" class="btn btn--primary btn--full" id="form-submit">
+          <span class="btn-text">Quiero mi diagnóstico gratuito →</span>
+          <span class="btn-loading" aria-hidden="true">Enviando…</span>
+        </button>
+        <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
       </form>
     </div>
   </section>
@@ -413,7 +437,10 @@
     <div class="container footer__inner">
 
       <div class="footer__brand">
-        <img src="logos/1.png" alt="Boost & Blossom" class="footer__logo" />
+        <picture>
+          <source srcset="logos/1.webp" type="image/webp">
+          <img src="logos/1.png" alt="Boost &amp; Blossom" class="footer__logo" width="160" height="160" loading="lazy">
+        </picture>
         <p class="footer__brand-name">Boost <span>&</span> Blossom</p>
         <p class="footer__slogan">ESTRATEGIA DE CONTENIDO PARA MARCAS PREMIUM</p>
         <div class="footer__social">
@@ -462,20 +489,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Botón modo oscuro -->
-  <button id="theme-toggle" aria-label="Cambiar tema">
-    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="4"/>
-      <line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
-      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
-      <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
-    </svg>
-  </button>
 
   <!-- ===== COOKIE BANNER ===== -->
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-live="polite">

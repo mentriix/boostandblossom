@@ -223,6 +223,11 @@ window.addEventListener('scroll', () => {
   }
 
   btn.addEventListener('click', function () {
+    // Reset staggered delays from scroll reveal so all elements transition at once
+    document.querySelectorAll('.faq__item, .service-card, .proceso__step, .stat, .suena-card, .filosofia__valores, .filosofia__derecha, .sobre-mi__text, .contacto__form, .contacto__info').forEach(el => {
+      el.style.transitionDelay = '0s';
+    });
+
     const isDark = !document.body.classList.contains('dark-mode');
     const apply = () => {
       document.body.classList.toggle('dark-mode');
