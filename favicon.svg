@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#F8F7F4"/>
+  <rect width="32" height="32" rx="8" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+  <!-- B izquierda espejada -->
+  <g transform="scale(-1,1) translate(-32,0)">
+    <text x="21.5" y="22" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#C5A059" text-anchor="middle">B</text>
+  </g>
+  <!-- B derecha -->
+  <text x="21.5" y="22" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#C5A059" text-anchor="middle">B</text>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(curl -s http://localhost:8080/index.html)",
+      "Bash(curl -s http://localhost:8080/style.css)",
+      "Bash(pkill -f \"python3 -m http.server 8080\")",
+      "Bash(fuser -k 8080/tcp)",
+      "Bash(curl -s http://localhost:8080/)",
+      "Read(//home/claude/Proyectos/**)",
+      "Read(//home/claude/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080)",
+      "Bash(mkdir:*)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(cp:*)",
+      "Bash(lsof:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(pkill -f \"http.server 3000\")",
+      "Bash(mkdir -p /home/claude/Escritorio/logos_boostandblossom)",
+      "Bash(mkdir -p /home/claude/Desktop/logos_boostandblossom)",
+      "Bash(curl -s http://localhost:8080/main.js)",
+      "Bash(pip3 install:*)",
+      "Bash(curl -s http://localhost:8080)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

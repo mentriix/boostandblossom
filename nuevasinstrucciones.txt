@@ -1,0 +1,152 @@
+Actúa como un desarrollador senior especializado en diseño web para agencias digitales de alto nivel.
+
+Voy a darte una web ya creada (HTML, CSS y JS). Tu objetivo NO es hacer pequeños cambios, sino transformarla en una web profesional de alto nivel enfocada en conversión, credibilidad y posicionamiento como servicio premium.
+
+CONTEXTO DEL NEGOCIO:
+Soy una profesional que ayuda a pequeñas empresas a mejorar sus redes sociales (Instagram, LinkedIn, TikTok) mediante estrategia, contenido y optimización. Aún no tengo clientes, pero quiero que la web proyecte nivel alto y confianza como si ya tuviera experiencia.
+
+OBJETIVO:
+Convertir esta web en una landing moderna tipo agencia premium, inspirada en webs de alto nivel (tipo estudios creativos, marketing agencies, SaaS landing pages).
+
+REQUISITOS CLAVE:
+
+1. CAMBIO DE MENSAJE (MUY IMPORTANTE)
+   Reescribe todo el copy para que deje de ser genérico.
+   Debe posicionarse como:
+   “Convierto redes sociales en un canal de captación de clientes”
+
+Evita frases vagas como “impulsa tu presencia”.
+Usa lenguaje directo, orientado a resultados y negocio.
+
+---
+
+2. HERO SECTION (REDISEÑO COMPLETO)
+
+* Cambiar layout a 2 columnas (texto + visual)
+* Añadir headline potente orientado a ventas
+* Subheadline claro
+* 2 CTAs (principal + secundario)
+* Añadir visual tipo mock (dashboard, feed o métricas)
+
+---
+
+3. AÑADIR SECCIÓN NUEVA: DASHBOARD / RESULTADOS
+   Crear una sección visual que simule resultados:
+
+* Cards con métricas (crecimiento seguidores, engagement, contenido mensual)
+* Añadir animación con JS (contador animado)
+* Debe parecer una herramienta profesional
+
+---
+
+4. SOBRE MÍ (REESCRIBIR)
+
+* Reducir texto emocional
+* Hacerlo más estratégico
+* Explicar claramente:
+  qué hago + para quién + qué resultado consigo
+
+---
+
+5. SERVICIOS (REENFOCAR)
+   No listarlos como features.
+   Convertirlos en resultados:
+
+* Detecto problemas
+* Diseño estrategia
+* Creo contenido que convierte
+* Optimizo crecimiento
+
+---
+
+6. PORTFOLIO (IMPORTANTE)
+   Eliminar “próximamente”.
+   Sustituir por:
+   “Ejemplo de estrategia” o “Caso hipotético realista”
+   Explicar:
+
+* problema
+* estrategia
+* resultado esperado
+
+---
+
+7. TESTIMONIOS
+   Eliminar sección actual o reemplazar por:
+   “¿Quieres ser el primer caso de éxito?”
+
+---
+
+8. CTA FINAL (MUY IMPORTANTE)
+   Reescribir para que sea agresivo en conversión:
+
+* Ofrecer auditoría gratuita
+* Lenguaje directo
+* Botón claro
+
+---
+
+9. DISEÑO (CSS)
+
+* Mantener estética elegante pero más “premium”
+* Reducir exceso decorativo floral (usar como acento)
+* Más espacio en blanco
+* Mejor contraste
+* Sensación de marca cara
+* Mejor jerarquía tipográfica
+
+---
+
+10. INTERACTIVIDAD (JS)
+    Añadir:
+
+* Animaciones suaves (scroll reveal ya existe → mejorar)
+* Contadores animados en dashboard
+* Hover effects más modernos
+* Microinteracciones en botones
+
+---
+
+11. FORMULARIO (MUY IMPORTANTE)
+    Actualmente NO envía datos (solo simula).
+    Debes:
+
+* Integrarlo con EmailJS o Formspree
+* Mantener UX pero hacerlo funcional
+
+---
+
+12. SEO BÁSICO
+    Añadir:
+
+* meta description optimizada
+* estructura correcta de headings
+* mejorar accesibilidad básica
+
+---
+
+13. RESPONSIVE
+    Asegurar que todo el nuevo diseño funciona perfecto en móvil (muy importante)
+
+---
+
+OUTPUT ESPERADO:
+
+Devuélveme:
+
+1. index.html completo actualizado
+2. style.css completo actualizado
+3. main.js completo actualizado
+
+No expliques demasiado.
+Quiero código limpio, moderno y listo para usar.
+
+Prioriza:
+
+* conversión
+* claridad
+* estética premium
+* sensación de agencia profesional
+
+No hagas cambios superficiales.
+Haz una transformación real de nivel.
