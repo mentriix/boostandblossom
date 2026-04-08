@@ -320,7 +320,7 @@ document.querySelectorAll('.faq__question').forEach(btn => {
   document.getElementById('btn-aviso')
     ?.addEventListener('click', () => openModal('modal-aviso'));
   document.getElementById('btn-cookies-footer')
-    ?.addEventListener('click', () => openModal('cookie-modal'));
+    ?.addEventListener('click', () => window.openModal('cookie-modal'));
 
   // Cerrar con data-close, backdrop y Escape — aplica a todos los modales
   document.addEventListener('click', e => {
