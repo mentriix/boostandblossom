@@ -2262,18 +2262,28 @@ body.dark-mode .form-error { color: #EC7063; }
 }
 
 /* =============================================
-   LANGUAGE SWITCHER — fixed en desktop, relativo en móvil
+   LANGUAGE SWITCHER
    ============================================= */
 .lang-switcher {
-  position: relative;
+  position: fixed;
+  top: 18px;
+  right: 48px;
   z-index: 1000;
 }
 
-@media (min-width: 769px) {
+/* En móvil: dentro del menú hamburguesa, al final */
+@media (max-width: 768px) {
   .lang-switcher {
-    position: fixed;
-    top: 18px;
-    right: 48px;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 1.6rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(181,146,68,.2);
+  }
+  .lang-switcher__btn {
+    font-size: .78rem;
+    opacity: .5;
   }
 }
 
