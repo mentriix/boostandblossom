@@ -2278,13 +2278,42 @@ body.dark-mode .form-error { color: #EC7063; }
     top: auto;
     right: auto;
     margin-top: 1.6rem;
-    padding-top: 1.2rem;
+    padding-top: 1.4rem;
     border-top: 1px solid rgba(181,146,68,.2);
   }
-  .lang-switcher__btn {
-    font-size: .78rem;
-    opacity: .5;
+
+  /* Ocultar el botón toggle — mostrar opciones directamente */
+  .lang-switcher__btn { display: none; }
+
+  .lang-switcher__dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: .8rem;
+    min-width: unset;
   }
+
+  .lang-option {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    opacity: .4;
+    padding: 0;
+    border-radius: 0;
+    color: var(--carbon);
+  }
+  .lang-option.active { opacity: 1; color: var(--gold); }
+  .lang-option:hover { background: none; opacity: .7; }
+
+  body.dark-mode .lang-option { color: #EAE6DE; }
+  body.dark-mode .lang-option.active { color: var(--gold-light); }
 }
 
 .lang-switcher__btn {
