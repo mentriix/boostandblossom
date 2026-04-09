@@ -31,7 +31,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* evita scroll horizontal en móvil */
+  max-width: 100%;
+}
 
 body {
   font-family: var(--font-body);
@@ -40,6 +44,7 @@ body {
   background: var(--pearl);
   line-height: 1.75;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 img { max-width: 100%; display: block; }
@@ -448,8 +453,8 @@ body.dark-mode .navbar__brand { color: #EAE6DE; }
   margin-top: 1.6rem;
   font-size: .85rem;
   letter-spacing: .5px;
-  color: var(--charcoal);
-  opacity: .72;
+  color: var(--carbon);
+  opacity: .82;
   text-align: center;
 }
 
@@ -1476,13 +1481,35 @@ body.dark-mode .faq__answer p { color: #B8B4AC; }
 
   .filosofia__grid { grid-template-columns: 1fr; gap: 2rem; }
   .filosofia__valores { margin-top: 0; }
+
+  /* Lang switcher — repositionar para no tapar botones de la navbar */
+  .lang-switcher { right: 100px; left: auto; }
+
+  /* Filosofía especialidades — evitar overflow horizontal */
+  .filosofia__especialidades {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  /* Táctil: altura mínima de 44px en elementos interactivos */
+  .btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .faq__question { min-height: 44px; }
+
+  /* Evitar zoom automático en iOS al enfocar inputs (necesita ≥16px) */
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-  /* Lang switcher — no tapar el hamburger */
-  .lang-switcher { top: 14px; right: auto; left: 1rem; }
-
   /* Reducir padding de todas las secciones */
   .sobre-mi,
   .filosofia,
@@ -1495,8 +1522,9 @@ body.dark-mode .faq__answer p { color: #B8B4AC; }
   }
 
   /* Hero */
-  .hero { padding: 110px 1.2rem 60px; }
+  .hero { padding: 100px 1.2rem 60px; }
   .hero__logo img { width: 110px; height: 110px; }
+  .hero__tagline { font-size: .68rem; letter-spacing: 3px; }
   .hero__headline { font-size: 1.85rem; line-height: 1.22; }
   .hero__sub { font-size: .92rem; }
   .hero__nichos { font-size: .78rem; }
@@ -1512,7 +1540,13 @@ body.dark-mode .faq__answer p { color: #B8B4AC; }
   }
 
   /* Manifesto */
+  .sobre-mi__manifesto { padding: 52px 0; }
   .manifesto__quote p { font-size: 1.05rem; }
+  .manifesto__quote::before { font-size: 4rem; }
+  .manifesto__quote cite { letter-spacing: 1.5px; font-size: .62rem; }
+
+  /* Section labels */
+  .section-label { letter-spacing: 1.8px; }
 
   /* Sobre mí */
   .sobre-mi__personal { padding-bottom: 2rem; }
@@ -1565,8 +1599,11 @@ body.dark-mode .faq__answer p { color: #B8B4AC; }
   .footer__col ul { align-items: center; }
   .footer__social { justify-content: center; }
   .footer__bottom .container { flex-direction: column; text-align: center; }
+  .footer__bottom ul { flex-wrap: wrap; justify-content: center; gap: .8rem; }
 
-    /* Dark mode toggle in navbar — no position override needed */
+  /* Cookie modal — asegurar que sea scrollable en pantallas pequeñas */
+  .cookie-modal { padding: .8rem; }
+  .cookie-modal__box { padding: 1.8rem 1.2rem 1.4rem; max-height: 88vh; overflow-y: auto; }
 }
 
 

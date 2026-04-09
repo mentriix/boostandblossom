@@ -5,14 +5,14 @@
 /* ---- Translations ---- */
 window.__T = {
   es: {
-    'nav.sobremi':'Sobre mí','nav.proceso':'Proceso','nav.servicios':'Servicios','nav.cta':'Diagnóstico gratuito',
+    'nav.sobremi':'Sobre mí','nav.proceso':'Proceso','nav.servicios':'Servicios','nav.cta':'Análisis gratuito',
     'hero.tagline':'Estrategia de contenido para marcas premium',
     'hero.h1a':'Tienes un producto excelente.','hero.h1b':'Es hora de que el mundo lo sepa.',
     'hero.sub':'Analizo tu negocio, diseño tu estrategia y transformo tu presencia en redes en un canal real de captación de clientes. Sin improvisar. Sin plantillas de serie.',
-    'hero.cta1':'Quiero mi diagnóstico gratuito','hero.cta2':'Ver cómo trabajo',
+    'hero.cta1':'Quiero mi análisis gratuito','hero.cta2':'Ver cómo trabajo',
     'hero.nichos':'Especializada en pequeñas empresas con grandes productos · Moda · Gastronomía · Servicios locales',
     'manifesto.q':'No trabajo con plantillas.<br>No trabajo con cualquiera.<br>Trabajo con marcas que merecen ser vistas.',
-    'manifesto.cite':'— Sara Martínez · Fundadora, Boost & Blossom',
+    'manifesto.cite':'— Sara Martínez · Fundadora, Boost & Blossom —',
     'sobre.lbl1':'La persona detrás de la marca','sobre.h2':'Hola, soy Sara Martínez',
     'sobre.bio1':'He estudiado artes y la creatividad ha sido parte de mí desde siempre. Me apasiona lo visual, lo que se construye con intención, lo que cuenta una historia sin necesidad de palabras. Con el tiempo descubrí algo que me cambió la perspectiva: hay miles de pequeñas empresas con productos increíbles que nadie conoce — no porque les falte valor, sino visibilidad.',
     'sobre.bio2':'Boost & Blossom nació de esa convicción. Mi trabajo es traducir la esencia de tu negocio en contenido digital que conecta, genera confianza y atrae clientes reales. No trabajo con plantillas ni fórmulas de serie — cada marca que acompaño tiene su propia historia, y esa historia merece ser bien contada.',
@@ -30,11 +30,11 @@ window.__T = {
     'filo.t2':'Cada cliente llega con el mismo problema: saben que tienen algo bueno, pero no saben cómo contarlo. Y eso cuesta ventas, visibilidad y oportunidades reales cada día que pasa.',
     'filo.t3':'Mi trabajo es hacer que tu marca comunique a la altura de lo que ofrece. Sin filtros, sin impostura, con la autenticidad que genera confianza y ventas reales.',
     'filo.esp':'Estrategia de contenido · Identidad de marca · Crecimiento orgánico · Canva & IA · Análisis de competencia',
-    'stat1':'Más alcance en 90 días','stat2':'Estrategia personalizada','stat3':'Tiempo de respuesta','stat4':'Diagnóstico inicial',
+    'stat1':'Más alcance en 90 días','stat2':'Estrategia personalizada','stat3':'Tiempo de respuesta','stat4':'Análisis inicial',
     'proc.lbl':'Cómo trabajo','proc.h2':'De cero a una marca<br />con presencia real',
     'proc.intro':'Un proceso claro, sin sorpresas, con resultados tangibles en cada etapa.',
     'proc.s1h':'Entiendo tu mundo','proc.s1p':'Primera llamada gratuita de 30 minutos. Conozco tu negocio, producto, valores y objetivos reales. Escucho antes de proponer.',
-    'proc.s2h':'Analizo y diagnostico','proc.s2p':'Auditoría de tu presencia actual, estudio de competencia y análisis de tu audiencia. Identifico qué falla y qué oportunidades no estás aprovechando.',
+    'proc.s2h':'Analizo y evalúo','proc.s2p':'Auditoría de tu presencia actual, estudio de competencia y análisis de tu audiencia. Identifico qué falla y qué oportunidades no estás aprovechando.',
     'proc.s3h':'Diseño la estrategia','proc.s3p':'Plan de contenidos, calendario editorial y piezas visuales adaptadas a tu identidad de marca. Todo listo para ejecutar, con mi ayuda.',
     'proc.s4h':'Publico y optimizo','proc.s4p':'Pongo en marcha la estrategia, mido resultados y ajusto cada mes para crecer de forma sostenida. Nada de "publicar y olvidar".',
     'serv.lbl':'Lo que hago','serv.h2':'Servicios diseñados<br />para tu crecimiento',
@@ -48,7 +48,7 @@ window.__T = {
     'cta.sub':'Analizo tu perfil, tu contenido y tu estrategia actual. Te explico exactamente qué está frenando tu crecimiento y cómo arreglarlo. Gratis. Sin rodeos.',
     'cta.btn':'Quiero mi auditoría gratuita',
     'faq.lbl':'Preguntas frecuentes','faq.h2':'Todo lo que necesitas saber<br />antes de empezar',
-    'faq1q':'¿Cuánto cuesta?','faq1a':'Depende del servicio y del alcance. El diagnóstico inicial no tiene coste. Los servicios mensuales se adaptan a tu presupuesto en una primera llamada. Sin sorpresas ni costes ocultos: sabes exactamente qué pagas antes de empezar.',
+    'faq1q':'¿Cuánto cuesta?','faq1a':'Depende del servicio y del alcance. El análisis inicial no tiene coste. Los servicios mensuales se adaptan a tu presupuesto en una primera llamada. Sin sorpresas ni costes ocultos: sabes exactamente qué pagas antes de empezar.',
     'faq2q':'¿Funciona para cualquier tipo de negocio?','faq2a':'Me especializo en pequeñas empresas con productos o servicios de calidad: moda, gastronomía, artesanía, servicios locales, lifestyle y negocios B2B de proximidad. Si tienes dudas sobre si tu negocio encaja, escríbeme y te lo digo con honestidad antes de proponer nada.',
     'faq3q':'¿Cuánto tiempo tardamos en ver resultados?','faq3a':'El crecimiento orgánico requiere consistencia. Los primeros resultados visibles —más coherencia de marca, mayor engagement, más alcance— suelen aparecer entre el segundo y tercer mes de trabajo constante. Lo que verás antes: claridad total en tu comunicación y publicaciones que realmente representan tu marca.',
     'faq4q':'¿Tengo que gestionar yo las redes o lo haces tú?','faq4a':'Depende del servicio que elijas. Puedo diseñar la estrategia y el contenido para que tú lo ejecutes, o puedo gestionar todo el proceso de principio a fin. Lo hablamos en la primera llamada y lo adaptamos a tu tiempo y preferencias.',
@@ -61,8 +61,8 @@ window.__T = {
     'form.lbl.empresa':'Tu negocio o marca','form.ph.empresa':'¿Cómo se llama tu empresa?',
     'form.lbl.email':'Email',
     'form.lbl.mensaje':'¿Cuál es tu situación actual?','form.ph.mensaje':'Cuéntame qué vendes, en qué redes estás y qué no está funcionando...',
-    'form.submit':'Quiero mi diagnóstico gratuito →','form.sending':'Enviando…',
-    'form.success':'¡Mensaje enviado! Te respondo en menos de 24h.',
+    'form.submit':'Enviar','form.sending':'Enviando…',
+    'form.success':'¡Listo! Contactaremos contigo pronto.',
     'form.error':'Algo salió mal. Escríbeme directamente a info@boostandblossom.com',
     'form.err.nombre':'Por favor, escribe tu nombre (mínimo 2 caracteres).','form.err.empresa':'Escribe el nombre de tu negocio o marca.',
     'form.err.email':'Escribe un email válido.','form.err.mensaje':'Cuéntame un poco más (mínimo 20 caracteres).',
@@ -87,14 +87,14 @@ window.__T = {
     'aviso.body':'<h4>1. Titular del sitio web</h4><p><strong>Nombre:</strong> Sara Martínez<br><strong>Actividad:</strong> Estrategia de contenido y gestión de redes sociales<br><strong>Contacto:</strong> <a href="mailto:info@boostandblossom.com">info@boostandblossom.com</a></p><h4>2. Objeto y condiciones de uso</h4><p>Este sitio web tiene carácter informativo y comercial. El acceso y uso del mismo implica la aceptación de las presentes condiciones. Boost &amp; Blossom se reserva el derecho de modificar, sin previo aviso, los contenidos y condiciones del sitio.</p><h4>3. Propiedad intelectual</h4><p>Todos los contenidos de este sitio web — textos, imágenes, logotipos, diseño y código — son propiedad de Boost &amp; Blossom o cuentan con la autorización correspondiente. Queda prohibida su reproducción, distribución o modificación sin consentimiento expreso por escrito.</p><h4>4. Exclusión de responsabilidad</h4><p>Boost &amp; Blossom no se responsabiliza de los daños derivados del uso del sitio, interrupciones del servicio o contenidos de terceros enlazados desde esta web.</p><h4>5. Legislación aplicable</h4><p>Este aviso legal se rige por la legislación española vigente, en particular la Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI) y el Reglamento General de Protección de Datos (RGPD).</p>',
   },
   en: {
-    'nav.sobremi':'About me','nav.proceso':'Process','nav.servicios':'Services','nav.cta':'Free Diagnosis',
+    'nav.sobremi':'About me','nav.proceso':'Process','nav.servicios':'Services','nav.cta':'Free Analysis',
     'hero.tagline':'Content strategy for premium brands',
     'hero.h1a':'You have an excellent product.','hero.h1b':"It's time the world knew about it.",
     'hero.sub':'I analyse your business, design your strategy and transform your social media presence into a real customer acquisition channel. No improvising. No off-the-shelf templates.',
-    'hero.cta1':'I want my free diagnosis','hero.cta2':'See how I work',
+    'hero.cta1':'I want my free analysis','hero.cta2':'See how I work',
     'hero.nichos':'Specialised in small businesses with great products · Fashion · Gastronomy · Local services',
     'manifesto.q':"I don't work with templates.<br>I don't work with just anyone.<br>I work with brands that deserve to be seen.",
-    'manifesto.cite':'— Sara Martínez · Founder, Boost & Blossom',
+    'manifesto.cite':'— Sara Martínez · Founder, Boost & Blossom —',
     'sobre.lbl1':'The person behind the brand','sobre.h2':"Hi, I'm Sara Martínez",
     'sobre.bio1':"I studied arts and creativity has always been a part of me. I'm passionate about the visual, about what is built with intention, about what tells a story without words. Over time I discovered something that changed my perspective: there are thousands of small businesses with incredible products that no one knows about — not because they lack value, but visibility.",
     'sobre.bio2':"Boost & Blossom was born from that conviction. My work is to translate the essence of your business into digital content that connects, builds trust and attracts real clients. I don't work with templates or off-the-shelf formulas — every brand I accompany has its own story, and that story deserves to be told well.",
@@ -112,11 +112,11 @@ window.__T = {
     'filo.t2':"Every client arrives with the same problem: they know they have something good, but they don't know how to communicate it. And that costs sales, visibility and real opportunities every day that passes.",
     'filo.t3':'My work is to make your brand communicate at the level of what it offers. Without filters, without pretence, with the authenticity that generates trust and real sales.',
     'filo.esp':'Content strategy · Brand identity · Organic growth · Canva & AI · Competitor analysis',
-    'stat1':'More reach in 90 days','stat2':'Personalised strategy','stat3':'Response time','stat4':'Initial diagnosis',
+    'stat1':'More reach in 90 days','stat2':'Personalised strategy','stat3':'Response time','stat4':'Initial analysis',
     'proc.lbl':'How I work','proc.h2':'From zero to a brand<br />with real presence',
     'proc.intro':'A clear process, no surprises, with tangible results at every stage.',
     'proc.s1h':'I understand your world','proc.s1p':'Free 30-minute introductory call. I get to know your business, product, values and real goals. I listen before proposing.',
-    'proc.s2h':'I analyse and diagnose','proc.s2p':"Audit of your current presence, competitor research and audience analysis. I identify what's not working and what opportunities you're missing.",
+    'proc.s2h':'I analyse and evaluate','proc.s2p':"Audit of your current presence, competitor research and audience analysis. I identify what's not working and what opportunities you're missing.",
     'proc.s3h':'I design the strategy','proc.s3p':'Content plan, editorial calendar and visual pieces tailored to your brand identity. Ready to execute, with my support.',
     'proc.s4h':'I publish and optimise','proc.s4p':'I launch the strategy, measure results and adjust monthly for sustained growth. No "post and forget".',
     'serv.lbl':'What I do','serv.h2':'Services designed<br />for your growth',
@@ -130,7 +130,7 @@ window.__T = {
     'cta.sub':"I'll analyse your profile, your content and your current strategy. I'll explain exactly what's holding back your growth and how to fix it. Free. No beating around the bush.",
     'cta.btn':'I want my free audit',
     'faq.lbl':'Frequently asked questions','faq.h2':'Everything you need to know<br />before we start',
-    'faq1q':'How much does it cost?','faq1a':"It depends on the service and scope. The initial diagnosis is free. Monthly services are tailored to your budget in a first call. No surprises or hidden costs: you know exactly what you pay before we start.",
+    'faq1q':'How much does it cost?','faq1a':"It depends on the service and scope. The initial analysis is free. Monthly services are tailored to your budget in a first call. No surprises or hidden costs: you know exactly what you pay before we start.",
     'faq2q':'Does it work for any type of business?','faq2a':"I specialise in small businesses with quality products or services: fashion, gastronomy, crafts, local services, lifestyle and local B2B businesses. If you're not sure whether your business is a good fit, write to me and I'll tell you honestly before proposing anything.",
     'faq3q':'How long does it take to see results?','faq3a':"Organic growth requires consistency. The first visible results — more brand coherence, higher engagement, greater reach — usually appear between the second and third month of consistent work. What you'll see sooner: total clarity in your communication and posts that truly represent your brand.",
     'faq4q':'Do I have to manage social media myself or do you?','faq4a':"It depends on the service you choose. I can design the strategy and content for you to execute, or I can manage the entire process from start to finish. We discuss it in the first call and adapt it to your time and preferences.",
@@ -143,7 +143,7 @@ window.__T = {
     'form.lbl.empresa':'Your business or brand','form.ph.empresa':'What is your company called?',
     'form.lbl.email':'Email',
     'form.lbl.mensaje':'What is your current situation?','form.ph.mensaje':"Tell me what you sell, which networks you're on and what isn't working...",
-    'form.submit':'I want my free diagnosis →','form.sending':'Sending…',
+    'form.submit':'Send','form.sending':'Sending…',
     'form.success':"Message sent! I'll get back to you in less than 24h.",
     'form.error':'Something went wrong. Write to me at info@boostandblossom.com',
     'form.err.nombre':'Please enter your name (minimum 2 characters).','form.err.empresa':'Enter the name of your business or brand.',
@@ -842,14 +842,7 @@ document.querySelectorAll('.faq__question').forEach(btn => {
     langBtn.setAttribute('aria-expanded', 'false');
   });
 
-  // Init on load
+  // Init on load — siempre aplicar traducciones para sincronizar HTML con JS
   const saved = localStorage.getItem('lang') || 'es';
-  if (saved !== 'es') {
-    applyLang(saved);
-  } else {
-    $$('.lang-option').forEach(b => {
-      b.classList.toggle('active', b.dataset.lang === 'es');
-      b.setAttribute('aria-selected', String(b.dataset.lang === 'es'));
-    });
-  }
+  applyLang(saved);
 })();
