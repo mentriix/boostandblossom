@@ -1482,9 +1482,6 @@ body.dark-mode .faq__answer p { color: #B8B4AC; }
   .filosofia__grid { grid-template-columns: 1fr; gap: 2rem; }
   .filosofia__valores { margin-top: 0; }
 
-  /* Lang switcher — repositionar para no tapar botones de la navbar */
-  .lang-switcher { right: 100px; left: auto; }
-
   /* Filosofía especialidades — evitar overflow horizontal */
   .filosofia__especialidades {
     white-space: normal;
@@ -2265,13 +2262,19 @@ body.dark-mode .form-error { color: #EC7063; }
 }
 
 /* =============================================
-   LANGUAGE SWITCHER — fixed top right
+   LANGUAGE SWITCHER — fixed en desktop, relativo en móvil
    ============================================= */
 .lang-switcher {
-  position: fixed;
-  top: 18px;
-  right: 48px;
+  position: relative;
   z-index: 1000;
+}
+
+@media (min-width: 769px) {
+  .lang-switcher {
+    position: fixed;
+    top: 18px;
+    right: 48px;
+  }
 }
 
 .lang-switcher__btn {
