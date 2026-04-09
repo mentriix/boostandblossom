@@ -2365,14 +2365,3 @@ body.dark-mode .lang-option { color: #EAE6DE; }
 body.dark-mode .lang-option:hover { background: rgba(255,255,255,.05); }
 body.dark-mode .lang-option.active { color: var(--gold-light); }
 
-/* Móvil: dropdown correctamente posicionado dentro del menú */
-@media (max-width: 768px) {
-  .lang-switcher__dropdown {
-    left: 0;
-    transform-origin: top left;
-    transform: scaleY(0.4);
-  }
-  .lang-switcher.open .lang-switcher__dropdown {
-    transform: scaleY(1);
-  }
-}
