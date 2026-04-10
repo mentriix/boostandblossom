@@ -2373,3 +2373,71 @@ body.dark-mode .lang-option.active { color: var(--gold-light); }
   }
 }
 
+/* =============================================
+   SCROLL TO TOP
+   ============================================= */
+#scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 890;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(181,146,68,.4);
+  background: rgba(248,247,244,.92);
+  backdrop-filter: blur(8px);
+  color: var(--gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease, background .2s ease, border-color .2s ease;
+}
+#scroll-top svg { width: 18px; height: 18px; }
+#scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#scroll-top:hover {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+}
+body.dark-mode #scroll-top {
+  background: rgba(28,28,28,.92);
+  border-color: rgba(181,146,68,.3);
+}
+
+/* =============================================
+   ACCESIBILIDAD — FOCUS VISIBLE
+   ============================================= */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible {
+  outline-offset: 4px;
+}
+
+/* =============================================
+   FORM SUCCESS — animación entrada
+   ============================================= */
+@keyframes feedbackIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.form-feedback.success,
+.form-feedback.error {
+  animation: feedbackIn .4s cubic-bezier(0.22,1,0.36,1) both;
+}
+.form-feedback.success::before {
+  content: '✓  ';
+  font-weight: 700;
+}
+
