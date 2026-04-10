@@ -1801,6 +1801,7 @@ body.dark-mode .cookie-modal__box {
 body.dark-mode .cookie-modal__title { color: #EAE6DE; }
 body.dark-mode .cookie-modal__intro,
 body.dark-mode .cookie-modal__note  { color: #B8B4AC; }
+body.dark-mode .cookie-modal__note strong { color: #EAE6DE; }
 body.dark-mode .cookie-modal__row   { color: #B8B4AC; }
 body.dark-mode .cookie-modal__close { color: #EAE6DE; }
 
